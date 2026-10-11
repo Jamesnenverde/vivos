@@ -1,0 +1,420 @@
+
+
+.Developers{
+    border-radius: 20px;
+   display: flex;
+   flex-wrap: wrap  ;
+   align-items: center;
+   justify-content: center;
+   margin-left: 5px;
+   margin-top: 30px; 
+   flex-direction: column;
+   gap: 20px;
+}
+
+
+#DeveloperArds{
+    border-radius: 20px;
+    width: 120px;
+    transition: 0.2s;
+    margin-right: 50px;
+}
+#DeveloperArds:hover{
+     border-radius: 40px;
+}
+
+
+ 
+.Developers h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column ;
+    margin-bottom: 30px;
+    color: wheat;
+    margin-left: 3px;
+    margin: 5px;
+}
+.Developers p{
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column ;
+    margin-bottom: 30px;
+    color: wheat;
+    margin-left: 100px;
+    margin: 0;
+}
+
+.text{
+    flex-wrap: wrap;
+     margin-left: 10px;
+    flex-basis: 100%;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.web{
+    flex-wrap: wrap;
+    color: goldenrod;
+    width: 30%;
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 40px;
+    border-radius: 0 50px;
+}
+.web p{
+    margin-left: 20px;
+    color: red;
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+.content{
+    flex-wrap: wrap;
+    margin-top: 50px;
+   background-color: #3b5200;
+    border: 3px solid goldenrod;
+    width: 320px;
+   height: 1050px;
+    margin-left: 10px;
+    border-radius: 20px;
+}
+
+.Family{
+   
+    flex-wrap: wrap;
+     display: flex;
+     margin-top: 50px;
+     align-items: center;
+     justify-content: center;
+     flex-direction: column;
+     gap: 15px;
+     max-width: 100%;
+     box-sizing: border-box;
+}
+
+.Family #F{
+    width: 250px;
+    max-width: 100%;
+   height: auto;
+}
+.content p{
+    margin-top: 20px ;
+}
+
+.friends{
+   
+    flex-wrap: wrap;
+     display: flex;
+     margin-top: 50px;
+     align-items: center;
+     justify-content: center;
+     flex-direction: row;
+     gap: 15px;
+}
+.friends #I{
+     max-width: 100%;
+     height: auto;
+}
+
+.ph{
+    color:  goldenrod;
+}
+
+
+.imagess{
+    display: flex;
+    justify-content: center;
+   margin-top: 50px;
+   align-items: center;
+}
+.Computer{
+    flex-wrap: wrap;
+    width: 70%;
+    height: auto;
+    margin-top: 150px;
+    padding-left: 25px;
+   
+    border-radius: 15px;
+  
+}
+#p1{
+    font-size: 20px;
+    font-weight: bolder;
+    color: goldenrod;
+}
+.Computer h1{
+    color: orange;
+}
+#p2{
+    font-size: 25px;
+    color: whitesmoke;
+}
+.csmission{
+ margin-top: 30px;
+    flex-wrap: wrap;
+    width: 70%;
+    height: auto;
+  
+    padding-left: 25px;
+    border-radius: 15px;
+    
+}
+
+.csmission p{
+    font-size: 25px;
+    color: whitesmoke;
+}
+.csmission h1{
+     color: orange;
+}
+
+.csvision{
+ margin-top: 30px;
+    flex-wrap: wrap;
+    width: 70%;
+    height: auto;
+  
+    padding-left: 25px;
+    border-radius: 15px;
+  
+}
+.csvision h1{
+     color: orange;
+}
+
+.csvision p{
+    font-size: 25px;
+    color: whitesmoke;
+}
+
+.Objectives{
+ margin-top: 30px;
+    flex-wrap: wrap;
+    width: 70%;
+    height: auto;
+   
+    padding-left: 25px;
+    border-radius: 15px;
+   
+}
+.Objectives h1{
+     color: orange;
+}
+
+.Objectives p{
+    font-size: 25px;
+    text-align: justify;
+    line-height: 1;
+    color: whitesmoke;
+}
+
+.Event{
+    margin-top: 25px;
+    background-image: url(../Images/backs.jpg);
+    background-size: cover;
+    border: 4px solid whitesmoke;
+    border-radius: 10px;
+    width: 70%;
+    
+}
+.Event h2{
+    padding-left: 23px;
+    color: whitesmoke;
+}
+
+.Event img{
+    width: 30%;
+    margin-left: 20px;
+    height: 200px;
+}
+
+
+@keyframes hello {
+    0%{
+        opacity: 1;
+    }
+     83%{
+        opacity: 1;
+    }
+     100%{
+        opacity: 0;
+    }
+}
+
+@keyframes name {
+    0% , 83%{
+        opacity: 1;
+    }
+     100%{
+        opacity: 0;
+    }
+}
+@media (max-width: 700px){
+    .web{ 
+    justify-content: center;
+    align-items: center;
+    margin-right: 60px;
+    font-size: 5px;
+    padding-left: 15px;
+}
+.web p{
+    margin-left:  50px;
+    color: red;
+    font-weight: bolder;
+    font-size: 20px;
+}
+.text p{
+    flex-wrap:wrap;
+    margin-right: 50px;
+}
+.text h2{
+    flex-wrap:wrap;
+    margin-right: 50px;
+}
+.Developers{
+    border-radius: 20px;
+   display: flex;
+   flex-wrap: wrap  ;
+   align-items: center;
+   justify-content: center;
+   margin-left: 60px;
+   margin-top: 30px; 
+   flex-direction: column;
+}
+.content{
+    flex-wrap: wrap;
+    margin-top: 50px;
+   background-color: #3b5200;
+    border: 3px solid goldenrod;
+    width: 320px;
+   height: 1050px;
+    margin-right: 60px;
+    border-radius: 20px;
+}
+
+.Family{
+   
+    flex-wrap: wrap;
+     display: flex;
+     margin-top: 50px;
+     align-items: center;
+     justify-content: center;
+     flex-direction: column;
+     gap: 15px;
+     max-width: 100%;
+     box-sizing: border-box;
+}
+.Computer{
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+    
+    padding-left: 15px;
+    padding-right: 5px;
+    border-radius: 15px;
+    
+}
+
+.Computer p{
+    text-align: justify;
+    line-height: 1.2;
+    padding-right: 5px;
+}
+.csmission{
+ margin-top: 30px;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+   
+    padding-left: 15px;
+    padding-right: 5px;
+    border-radius: 15px;
+   
+}
+.csmission p{
+    flex-wrap: wrap;
+    text-align: justify;
+    line-height: 1.2;
+  
+   padding-right: 5px;
+    color: whitesmoke;
+}
+.csvision{
+ margin-top: 30px;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+   
+    padding-left: 15px;
+    border-radius: 15px;
+   
+}
+
+
+.Objectives{
+ margin-top: 30px;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+    
+    padding-left: 15px;
+    padding-right: 5px;
+    border-radius: 15px;
+   
+}
+
+.Objectives p{
+    flex-wrap: wrap;
+    text-align: justify;
+    line-height: 1.2;
+  
+   padding-right: 5px;
+    color: whitesmoke;
+}
+.Family #F{
+    width: 250px;
+    max-width: 100%;
+   height: auto;
+}
+.friends{
+   
+    flex-wrap: wrap;
+     display: flex;
+     margin-top: 50px;
+     align-items: center;
+     justify-content: center;
+     flex-direction: row;
+     gap: 15px;
+}
+.friends #I{
+     max-width: 100%;
+     height: auto;
+}
+
+.Event{
+    flex-wrap: wrap;
+    margin-top: 25px;
+    border: 4px solid white;
+    border-radius: 10px;
+    width: 100%;
+   
+}
+.Event h2{
+    padding-left: 23px;
+    color: whitesmoke;
+}
+
+.Event img{
+    width:95%;
+    height:170px;
+    margin-left: 12px;
+    height: 200px;
+}
+
+
+}

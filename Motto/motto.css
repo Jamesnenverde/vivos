@@ -1,0 +1,33 @@
+
+
+.future{
+     margin-left: 30px;
+     flex-wrap: wrap;
+    color: goldenrod;
+}
+.future h3{
+      margin-left: 20px;
+}
+.future h1{
+      margin-right: 25px;
+}
+.titles{
+     font-style: oblique;
+    font-size: 30px;
+    color: whitesmoke;
+}
+
+@media (max-width: 600px){
+.titles{
+    width: 80%;
+    flex-wrap: wrap;
+    font-size: 15px;
+    color: whitesmoke;
+}
+
+.future{
+     flex-wrap: wrap;
+    color: goldenrod;
+}
+
+}

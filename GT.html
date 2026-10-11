@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vivos X300 Ultra — Beyond the Limits</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="nav">
+  <a href="#home" class="brand">vivos <b>X300 Ultra</b></a>
+  <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  <nav id="menu">
+    <a href="#home">Home</a>
+    <a href="#design">Design</a>
+    <a href="#camera">Camera</a>
+    <a href="#performance">Performance</a>
+   <a href="#battery">Battery</a>
+    <a href="#specs">Specifications</a>
+    <a href="#location">Location</a>
+    <a href="#buy" class="cta">Buy Now</a>
+    <a href="Home/index.html">University</a>
+  </nav>
+</header>
+
+<main>
+<!-- HERO -->
+<section id="home" class="hero">
+  <div class="hero-text reveal">
+    <p class="eyebrow">ZEISS co-engineered flagship</p>
+    <h1>VIVOS <span>X300 ULTRA</span></h1>
+    <p class="tag">“Beyond the Limits.”</p>
+    <p class="lead">A camera-first flagship with two 200MP sensors, a 6.82-inch 2K AMOLED display and a 6600mAh battery.</p>
+    <div class="row">
+      <a class="btn primary" href="#design">Explore Phone</a>
+      <a class="btn ghost" href="#specs">View Specifications</a>
+    </div>
+  </div>
+
+  <div class="hero-phone reveal">
+    <div class="stage" id="stage" aria-label="Drag to rotate the phone">
+      <div class="glow"></div>
+      <div class="phone" id="phone">
+        <div class="face front"><div class="screen"><i class="hole"></i><div class="clock">9:41<small>Beyond the Limits</small></div></div></div>
+        <div class="face back">
+          <i class="flash"></i>
+          <div class="module">
+            <i class="disc" style="--i:1"></i><i class="disc" style="--i:2"></i><i class="disc" style="--i:3"></i>
+            <i class="disc" style="--i:4"></i><i class="disc" style="--i:5"></i>
+            <div class="glass">
+              <i class="lens a"></i><i class="lens b"></i><i class="lens c"></i><i class="lens d"></i>
+              <span class="zeiss">ZEISS<u>T*</u></span>
+            </div>
+          </div>
+          <span class="logo">vivo</span>
+        </div>
+        <div class="face side left"><i class="key k1"></i><i class="key k2"></i></div>
+        <div class="face side right"><i class="key k1"></i><i class="key k2"></i></div>
+        <div class="face cap top"></div>
+        <div class="face cap bottom"></div>
+      </div>
+      <div class="floor"></div>
+    </div>
+    <p class="hint">Drag or swipe to rotate ·3D model</p>
+    <div class="row center" role="group" aria-label="Phone view">
+      <button class="chip on" data-view="front">Front</button>
+      <button class="chip" data-view="rear">Rear</button>
+      <button class="chip" data-view="side">Side</button>
+    </div>
+    <div class="swatches" id="swatches" role="group" aria-label="Phone colour"></div>
+    <p class="cname">Colour: <b id="cname">Titanium Black</b> <small>(sample colours,)</small></p>
+  </div>
+</section>
+
+<!-- DESIGN / OVERVIEW -->
+<section id="design" class="sec">
+  <h2 class="reveal">Designed to <span>disappear</span> in the hand</h2>
+  <div class="grid cards">
+    <article class="card reveal"><h3>Design</h3><p>A camera module-led back, aluminium-class premium finish language and IP69 water resistance for everyday confidence.</p></article>
+    <article class="card reveal"><h3>Display</h3><p>A 6.82-inch 2K AMOLED screen built for photos, video and games.</p></article>
+    <article class="card reveal"><h3>Camera</h3><p>200MP main, 200MP 3.7× telephoto and 50MP ultra-wide, all with OIS, plus optional ZEISS telephoto extenders.</p></article>
+    <article class="card reveal"><h3>Performance</h3><p>Qualcomm Snapdragon 8 Elite Gen 5 with 512GB of storage.</p></article>
+    <article class="card reveal"><h3>Battery</h3><p>6600mAh with 100W wired and 40W wireless charging.</p></article>
+    <article class="card reveal"><h3>Software</h3><p>Android 16 with OriginOS 6, with up to 5 years of OS upgrades and 7 years of security updates.</p></article>
+  </div>
+</section>
+
+<!-- CAMERA -->
+<section id="camera" class="sec">
+  <h2 class="reveal">Camera <span>zoom demo</span></h2>
+  <p class="note reveal">Simulated digital zoom on a sample photo. It is a visual demo only and does not reproduce the phone's real optical or hybrid zoom quality. The sample image is low resolution, so it softens at high zoom.</p>
+  <div class="cam reveal">
+    <div class="view" id="view"><img id="photo" src="images/mountain2.jpg" alt="Snow-capped mountain above a calm lake at dusk" draggable="false"><i class="mark" id="mark"></i><span class="badge" id="zv">1.0×</span></div>
+    <div class="row center" id="lenses" role="group" aria-label="Lens">
+      <button class="chip" data-z="0.5">Ultra-wide</button>
+      <button class="chip" data-z="1">Main</button>
+      <button class="chip" data-z="3.7">Telephoto</button>
+      <button class="chip" data-z="20">High Zoom</button>
+    </div>
+    <div class="row center" id="zbtns"></div>
+    <label class="range">Zoom <input type="range" id="zr" min="0.5" max="100" step="0.1" value="1"></label>
+    <div class="row center"><button class="btn ghost" id="reset">Reset View</button></div>
+    <p class="hint">Click the picture to set the zoom centre · drag to pan when zoomed</p>
+  </div>
+</section>
+
+<!-- PERFORMANCE -->
+<section id="performance" class="sec">
+  <h2 class="reveal"><span>Performance</span></h2>
+  <div class="grid cards">
+    <article class="card reveal"><h3>Processor</h3><p>Qualcomm Snapdragon 8 Elite Gen 5 (3 nm).</p></article>
+    <article class="card reveal"><h3>Gaming</h3><p>Benchmark and frame-rate figures: <span class="na">AnTuTu: 2346352 (v10), 3416530 (v11)
+GeekBench: 9843 (v6)</span>.</p></article>
+    <article class="card reveal"><h3>Multitasking</h3><p>RAM: 12GB or 16GB, as listings differ. <span class="na">Verify with vivo</span>.</p></article>
+    <article class="card reveal"><h3>Memory</h3><p>512GB storage on the Philippine variants.</p></article>
+    <article class="card reveal"><h3>Thermal management</h3><p>Cooling system details: <span class="na">not confirmed</span>.</p></article>
+  </div>
+</section>
+
+<!-- BATTERY -->
+<section id="battery" class="sec">
+  <h2 class="reveal"><span>Battery</span> &amp; charging</h2>
+  <div class="card batt reveal">
+    <div class="bat" aria-hidden="true"><div class="fill" id="fill"></div><b id="pct">0%</b></div>
+    <ul class="facts">
+      <li><b>6600mAh</b> battery</li>
+      <li><b>100W</b> wired charging (Vivos FlashCharge)</li>
+      <li><b>40W</b> wireless charging</li>
+      <li>Power-saving features: <span class="na">not confirmed</span></li>
+    </ul>
+    <button class="btn primary" id="charge"> Flash Charging</button>
+    <p class="hint">Full charge  at 41- minutes</p>
+  </div>
+</section>
+
+<!-- SPECS -->
+<section id="specs" class="sec">
+  <h2 class="reveal"><span>Specifications</span></h2>
+  <div class="tabs reveal" id="tabs" role="tablist"></div>
+  <div class="grid specs reveal" id="panel" role="tabpanel"></div>
+  <p class="hint">Specs compiled from Philippine launch coverage.</p>
+</section>
+
+<!-- BUY -->
+<section id="buy" class="sec">
+  <h2 class="reveal">Make it <span>yours</span></h2>
+  <div class="card buy reveal">
+    <h3>Configuration</h3>
+    <div class="opts" id="opts" role="radiogroup"></div>
+    <p class="hint">Only Philippine configurations found in launch coverage are listed. RAM is not selectable because sources differ.</p>
+    <div class="sum">
+      <div><small>Selected</small><b id="sel">—</b><br><small>Colour: <span id="selc">Titanium Black</span></small></div>
+      <div class="price" id="price">₱0</div>
+    </div>
+    <p class="hint">Availability: pre-orders were reported May 23 – June 5, 2026; check vivo for current stock. Warranty: <span class="na">not verified</span>.</p>
+    <div class="row">
+      <button class="btn primary" id="buyNow">Buy Now</button>
+      <button class="btn ghost" id="addCart">Add to Cart (<span id="cc">0</span>)</button>
+    </div>
+  </div>
+</section>
+
+<section id="location" class="sec">
+  <h2 class="reveal">Find <span>us</span></h2>
+  
+  <div class="map reveal">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3860.3920866957096!2d121.01701967413311!3d14.633670876268107!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b64506899a6f%3A0x70adff3e73248746!2sFisher%20Mall!5e0!3m2!1sen!2sph!4v1791754641149!5m2!1sen!2sph"
+      style="border:0;" allowfullscreen="" loading="lazy"
+      referrerpolicy="strict-origin-when-cross-origin" title="Store location map"></iframe>
+  </div>
+</section>
+</main>
+
+<footer>Unofficial concept page.</footer>
+<div class="toast" id="toast" role="status"></div>
+<script src="Main.js"></script>
+</body>
+</html>

@@ -1,0 +1,244 @@
+
+
+.missions{
+    background-color: darkseagreen;
+    flex-wrap: wrap;
+    min-height: 200px;
+    height: auto;
+    border: 10px double;
+    border-radius: 20px;
+    color: white;
+    width: 70%;
+    margin-top: 50px;
+    padding: 50px;
+    
+}
+
+
+.ace{
+    min-width: 90%;
+    flex-wrap: wrap;
+    font-size: 30px;
+    margin-top: 10px;
+    margin-left: 5px;
+}
+h4{
+    color: darkgoldenrod;
+    font-weight: bolder;
+    font-size: 25px;
+    margin-left: 40px ;
+    margin: 10px;
+    
+}
+
+h3{
+    color: orangered;
+    flex-wrap: wrap;
+    margin: 0;
+}
+
+p{
+    font-size: large;
+    margin-left: 10px;
+}
+.Box1{
+    margin-top: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.A{
+     flex-wrap: wrap;
+    width: 300px;
+    background-color:darkslategrey;
+     border: 5px double whitesmoke;
+     border-radius: 10px;
+     height: 260px;
+     padding-left: 15px;
+   
+     transition: 0.5s;
+    
+}
+.A:hover{
+    border: 5px dashed whitesmoke;
+     background-color:darkslategrey;
+    box-shadow: 2px 2px 7px  yellowgreen;
+    border-radius: 50px;
+  
+}
+
+ .A p{
+   color:darkgoldenrod;
+    font-weight: bolder;
+    padding-left: 10px;
+    margin: 5px;
+ }
+.A h2{
+   
+     flex-wrap: wrap;
+    margin-top: 30px;
+    color: white;
+    font-size: 80px;
+padding: 10px;
+  margin: 0 ; 
+  transition: 0.2s;
+}
+ .A h2:hover{
+    color: black;
+     text-shadow: 1px 2px 7px red;
+ }
+ .name{
+    flex-wrap: wrap;
+    color: whitesmoke;
+    margin-bottom: 15px;
+ }
+    
+.C{
+     
+    width: 300px;
+     background-color:darkslategrey;
+     border-radius: 10px;
+     border: 5px double whitesmoke;
+     height: 260px;
+     padding-left: 15px;
+
+    transition: 0.2s;
+}
+
+.C:hover{
+       border: 5px dashed whitesmoke;
+     background-color:darkslategrey;
+    box-shadow: 2px 2px 7px goldenrod;
+    border-radius: 50px;
+}
+ .C p{
+    color:darkgoldenrod;
+    font-weight: bolder;
+    padding-left: 10px;
+    margin: 5px;
+ }
+.C h2{
+    flex-wrap: wrap;
+    margin-top: 30px;
+    color: white;
+    font-size: 80px;
+    margin: 5px 0; 
+padding: 10px;
+
+}
+.C h2:hover{
+    color: black;
+     text-shadow: 1px 2px 7px red;
+ }
+ 
+
+ .names{
+    color: whitesmoke;
+    margin-bottom: 15px;
+ }
+ 
+.E{
+     
+    width: 300px;
+ order: 5px dashed whitesmoke;
+   background-color:darkslategrey;
+     border-radius: 10px;
+     height: 260px;
+     padding-left: 15px;
+   
+    transition: 0.2s;
+}
+.E:hover{
+      border: 5px dashed whitesmoke;
+     background-color:darkslategrey;
+    box-shadow: 2px 2px 7px goldenrod;
+    border-radius: 50px;
+}
+
+ .E p{
+    color:darkgoldenrod;
+    font-weight: bolder;
+    padding-left: 10px;
+    margin: 5px;
+ }
+.E h2{
+    margin-top: 30px;
+    color: white;
+    font-size: 80px;
+    margin: 5px 0; 
+padding: 10px;
+transition: 0.2s;
+}
+ .E h2:hover{
+    color: black;
+     text-shadow: 1px 2px 7px red;
+ }
+
+
+ .namess{
+    color: whitesmoke;
+    margin-bottom: 10px;
+ }
+    
+
+@media (max-width: 500px){
+    .missions{
+    flex-wrap: wrap;
+    min-height: 200px;
+    height: auto;
+    margin-top: 50px;
+    border: 2px solid white;
+    border-radius: 20px;
+    color: white;
+    width: 100%;
+    padding: 10px;
+    background-color: #3b5200;
+}
+
+.A{
+     flex-wrap: wrap;
+    width: 100%;
+    border: 2px solid whitesmoke;
+     border-radius: 10px;
+     height: 300px;
+     padding-left: 15px;
+    
+}
+
+.A h2{
+   
+     flex-wrap: wrap;
+    margin-top: 30px;
+    color: white;
+    font-size: 80px;
+padding: 10px;
+  margin: 0 ; 
+  transition: 0.5s;
+}
+ .A h2:hover{
+    color: black;
+     text-shadow: 1px 2px 7px red;
+ }
+.C{
+     
+    width: 100%;
+    border: 2px solid whitesmoke;
+     border-radius: 10px;
+     height: 300px;
+     padding-left: 15px;
+    
+}
+.E{
+     
+    width: 100%;
+    border: 2px solid whitesmoke;
+     border-radius: 10px;
+     height: 300px;
+     padding-left: 15px;
+    
+}
+}

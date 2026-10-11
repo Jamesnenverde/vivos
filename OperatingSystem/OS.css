@@ -1,0 +1,129 @@
+.selection{
+    font-size: 20px;
+    margin-top: 30px;
+}
+
+.Windows{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.Windows img{
+    align-items: center;
+  
+    width: 100px;
+}
+.Windows p {
+    text-align: justify;
+    color: lightblue;
+    font-size: 20px;
+    font-weight: bolder;
+}
+ .Windows h3{
+        color: lightblue;
+    }
+
+.Windows a{
+    row-gap: 20px;
+    margin-right: 20px;
+    padding-left: 10px;
+    text-decoration: none;
+    color: whitesmoke;
+}
+.selection a{
+    row-gap: 20px;
+    margin-right: 20px;
+    padding-left: 10px;
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.ver1{
+    background-color: darkblue;
+    font-size: 20px;
+    padding-top: 5px;
+    color: whitesmoke;
+    height: 60px;
+    padding-left: 10px;
+    border: 2px solid;
+    border-radius: 10px;
+    border-left: 5px solid darkgoldenrod;
+      border-right: 50px solid darkgoldenrod;
+      transition: 0.4;
+}
+
+.ver1:hover{
+    background-color: black;
+    transform: translateY(-15px)
+}
+
+.version p{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    color: whitesmoke;
+}
+
+.Macos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.Macos img{
+    align-items: center;
+  
+    width: 100px;
+}
+.Macos p {
+    color: darkgoldenrod;
+    text-align: justify;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.Macos a{
+    row-gap: 20px;
+    margin-right: 20px;
+    padding-left: 10px;
+    text-decoration: none;
+    color: whitesmoke;
+}
+ .Macos h3{
+        color: darkgoldenrod;
+    }
+
+
+.Linux{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.Linux img{
+    align-items: center;
+  
+    width: 100px;
+}
+.Linux p {
+    color: whitesmoke;
+     text-align: justify;   
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+    .Linux h3{
+        color: whitesmoke;
+    }
+
+
+.Linux a{
+    row-gap: 20px;
+    margin-right: 20px;
+    padding-left: 10px;
+    text-decoration: none;
+    color: whitesmoke;
+}

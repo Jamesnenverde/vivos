@@ -1,0 +1,304 @@
+
+
+.Developers{
+    border-radius: 20px;
+   display: flex;
+   flex-wrap: wrap  ;
+   align-items: center;
+   justify-content: center;
+   margin-right: 60px;
+   margin-top: 30px; 
+   flex-direction: row;
+   gap: 20px;
+}
+
+#change{
+    display: none;
+}
+
+#Developer{
+
+    border-radius: 20px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: 0.2s;
+    
+}
+
+
+#Developer:hover{
+    transform: translateY(20px);
+    border-radius: 40px;
+     
+}
+
+#DeveloperArd{
+    
+    border-radius: 20px;
+    width: 120px;
+   
+    transition: 0.2s;
+}
+#DeveloperArd:hover{
+     transform: translateY(20px);
+     border-radius: 40px;
+}
+#DeveloperArds{
+    border-radius: 20px;
+    width: 120px;
+    transition: 0.2s;
+}
+#DeveloperArds:hover{
+     transform: translateY(20px);
+     border-radius: 40px;
+}
+#Developer2{
+    
+    object-fit: cover;
+    display: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.2s;
+    margin-right: 40px;
+   
+}
+
+
+#Developer2:hover{
+    border-radius: 40px;
+}
+
+.aaa{
+    display: block;
+}
+.text{
+    display: none;
+}
+.content{
+    display: none;
+}
+#change:checked ~ .Developers #Developer{
+    display: none;
+}
+ 
+ #change:checked ~ .Developers #DeveloperArd{
+    display:none;
+}
+ #change:checked ~ .Developers #DeveloperArds{
+    display:none;
+}
+ #change:checked ~ .Developers #Developer2{
+            display: block;
+ }
+ #change:checked ~ .Developers .aaa{
+            display: none;
+ }
+  #change:checked ~ .Developers .text{
+            display: block;
+ }
+  #change:checked ~ .Developers .content{
+            display: block;
+  }
+ 
+.Developers h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column ;
+    margin-bottom: 30px;
+    color: wheat;
+    margin-left: 3px;
+    margin: 5px;
+}
+.Developers p{
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin-bottom: 30px;
+    color: wheat;
+    margin-left: 3px;
+    margin: 0;
+}
+
+.text{
+    margin-left: 50px;
+    display: none;
+    flex-basis: 100%;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.web{
+    flex-wrap: wrap;
+    color: goldenrod;
+    width: 30%;
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 40px;
+    border-radius: 0 50px;
+}
+.web p{
+    margin-left: 40px;
+    color: darkseagreen;
+    font-weight: bolder;
+    font-size: 20px;
+    font-style: italic;
+}
+
+.content{
+    background-color: #3b5200;
+    padding: 10px;
+    flex-wrap: wrap;
+    margin-top: 50px;
+      background-color: darkseagreen;
+    border: 7px dashed  white;
+    border-radius: 20px;
+    width: 700px;
+    height: auto;
+    min-height: 900px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.Family{
+   
+    flex-wrap: wrap;
+     display: flex;
+     margin-top: 50px;
+     align-items: center;
+     justify-content: center;
+     flex-direction: column;
+     gap: 15px;
+     max-width: 100%;
+     box-sizing: border-box;
+}
+
+.Family img{
+    width: 300px;
+    max-width: 100%;
+   height: 250px;
+}
+.content p{
+    margin-top: 20px ;
+}
+
+.friends{
+   
+    flex-wrap: wrap;
+     display: flex;
+     margin-top: 50px;
+     align-items: center;
+     justify-content: center;
+     flex-direction: row;
+     gap: 15px;
+}
+.friends img{
+     max-width: 100%;
+     width: 140px;
+     height: 100px;
+     height: 250px;
+}
+
+.aaa{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+@media (max-width: 700px){
+    .web{
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-right: 60px;
+    font-size: 5px;
+    padding-left: 15px;
+}
+.web p{
+    margin-left:  50px;
+    color: darkseagreen;
+    font-weight: bolder;
+    font-size: 20px;
+}
+.text p{
+    flex-wrap:wrap;
+    margin-right: 50px;
+}
+.text h2{
+    flex-wrap:wrap;
+    margin-right: 50px;
+}
+
+.Developers{
+    border-radius: 20px;
+   display: flex;
+   flex-wrap: wrap  ;
+   align-items: flex-start;
+   justify-content: center;
+   width: 100%;
+    margin-right: 4px;
+   margin-top: 30px; 
+   flex-direction: row;
+}
+
+#Developer2{
+    
+    object-fit: cover;
+    display: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.2s;
+    margin-right: 80px;
+   
+}
+.content{
+    scroll-behavior: smooth;
+    flex-wrap: wrap;
+    margin-top: 50px;
+   background-color: darkseagreen;
+    border: 5px dashed  color: #AB8B07;
+    width: 100%;
+   height: 100%;
+    margin-right: 5px;
+    border-radius: 20px;
+}
+
+
+.Family{
+   
+    flex-wrap: wrap;
+     display: flex;
+     margin-top: 50px;
+     align-items: center;
+     justify-content: center;
+     flex-direction: column;
+     gap: 15px;
+     max-width: 100%;
+     box-sizing: border-box;
+}
+
+.Family img{
+    width: 250px;
+    max-width: 100%;
+   height: auto;
+}
+.friends{
+   
+    flex-wrap: wrap;
+     display: flex;
+     margin-top: 50px;
+     align-items: center;
+     justify-content: center;
+     flex-direction: row;
+     gap: 15px;
+}
+.friends #I{
+     max-width: 100%;
+     height: auto;
+}
+}

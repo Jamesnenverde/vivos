@@ -149,7 +149,7 @@ padding: 10px;
      border-radius: 10px;
      height: 260px;
      padding-left: 15px;
-   
+    border: 5px double whitesmoke;
     transition: 0.2s;
 }
 .E:hover{

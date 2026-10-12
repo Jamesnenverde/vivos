@@ -11,13 +11,15 @@
     flex-direction: row;
     gap: 20px;
 }
-#DeveloperArds{
+#Developerjessa{
+    width: 400px;
+    height: 200px;
     border-radius: 20px;
     width: 120px;
     transition: 0.2s;
     margin-right: 20px;
 }
-#DeveloperArds:hover{
+#Developerjessa:hover{
      border-radius: 40px;
 }
 
@@ -72,20 +74,58 @@
     font-style: italic;
 }
 
-.content{
-    background-color: #3b5200;
+.content {
+    position: relative;
+    isolation: isolate;
+    background-color: darkseagreen;
     padding: 10px;
-    flex-wrap: wrap;
     margin-top: 50px;
-    border: 3px solid color: #AB8B07;
     border-radius: 20px;
     width: 60%;
-    height: auto;
     min-height: 900px;
     box-sizing: border-box;
     overflow: hidden;
 }
 
+/* Animated dashed border */
+.content::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    padding: 8px;
+    border-radius: inherit;
+
+    background: repeating-conic-gradient(
+        from var(--angle, 0deg),
+        #fffb0096 0deg 10deg,
+        #00ffcc 10deg 20deg,
+        #7b2ff7 20deg 30deg,
+        #ff0080 30deg 40deg,
+        #fffb0096 40deg 50deg
+    );
+
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+
+    animation: borderMove 4s linear infinite;
+    pointer-events: none;
+    z-index: -1;
+}
+
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+@keyframes borderMove {
+    to {
+        --angle: 360deg;
+    }
+}
 .Family{
    
     flex-wrap: wrap;
@@ -100,7 +140,7 @@
 }
 
 .Family #F{
-    width: 200px;
+    width: 400px;
     max-width: 100%;
    height: auto;
 }
@@ -120,6 +160,7 @@
 }
 .friends img{
      max-width: 100%;
+     width: 200px;
      height: 100px;
      height: 250px;
 }
@@ -174,7 +215,7 @@
     scroll-behavior: smooth;
     flex-wrap: wrap;
     margin-top: 50px;
-   background-color: #3b5200;
+   background-color: darkseagreen;
     border: 3px solid color: #AB8B07;
     width: 100%;
    height: auto;

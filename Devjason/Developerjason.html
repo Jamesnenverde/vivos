@@ -4,113 +4,164 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>THE UNIVERSITY OF MANILA</title>
-     <link rel="icon"  type="image/jpg" href="../Images/UM.jpg" id="icon">
+    <link rel="icon" type="image/jpg" href="../Images/UM.jpg" id="icon">
     <link rel="stylesheet" href="../Home/index.css">
     <link rel="stylesheet" href="Developer.css">
-   
-
 </head>
-<body>
+<body class="playing">
 
-<div class="buttos">
-  <a href="../GT.html">
-    <button><span class="nav-btn">Back</span></button>
-  </a>
-         <a href="../Home/index.html">
-    <button><span class="nav-btn">History</span></button>
-  </a>
-  <a href="../Mission/mission.html">
-    <button><span class="nav-btn">UM Mission</span></button>
-  </a>
-  <a href="../Vision/vision.html">
-    <button><span class="nav-btn">UM Vision</span></button>
-  </a>
-  <a href="../Motto/motto.html">
-    <button><span class="nav-btn">UM Motto</span></button>
-  </a>
-  <a href="../Prof/prof.html">
-    <button><span class="nav-btn">Professor</span></button>
-  </a>
-  <a href="../Csevent/Com.html">
-    <button><span class="nav-btn">Computer Science</span></button>
-  </a>
-  <a href="../Devjason/Developerjason.html">
-    <button><span class="nav-btn">Developer</span></button>
-  </a>
-  <a href="../OperatingSystem/OS.html">
-    <button><span class="nav-btn">Operating System</span></button>
-  </a>
-</div>
-  <div class="container">
-    <img src="../Images/newlogo.jpg" alt="" id="ums" width="200px">
-    
+<!-- HEADER: starts centered (intro), then animates to the upper-left -->
+<header class="top intro">
+  <div class="brand">
+    <div class="container">
+      <img src="../Images/newlogo.jpg" alt="University of Manila logo" id="ums">
     </div>
-</div>
- 
     <div class="title">
       <div class="name">
-      <h3>Patria</h3>
-        <h3>-</h3>
-        <h3>Scientia</h3>
-        <h3>-</h3>
-          <h3>Virtus</h3>
-          </div>
-    <h2>THE  UNIVERSITY OF MANILA </h2>
-
+        <h3>Patria</h3><h3>-</h3><h3>Scientia</h3><h3>-</h3><h3>Virtus</h3>
+      </div>
+      <h2>THE UNIVERSITY OF MANILA</h2>
+    </div>
   </div>
 
+  <nav class="buttos">
+    <a href="../GT.html"><button><span class="nav-btn">Back</span></button></a>
+    <a href="../Home/index.html"><button><span class="nav-btn">History</span></button></a>
+    <a href="../Mission/mission.html"><button><span class="nav-btn">UM Mission</span></button></a>
+    <a href="../Vision/vision.html"><button><span class="nav-btn">UM Vision</span></button></a>
+    <a href="../Motto/motto.html"><button><span class="nav-btn">UM Motto</span></button></a>
+    <a href="../Prof/prof.html"><button><span class="nav-btn">Professor</span></button></a>
+    <a href="../Csevent/Com.html"><button><span class="nav-btn">Computer Science</span></button></a>
+    <a href="../Devjason/Developerjason.html"><button><span class="nav-btn">Developer</span></button></a>
+    <a href="../OperatingSystem/OS.html"><button><span class="nav-btn">Operating System</span></button></a>
+  </nav>
+</header>
 
+<!-- ALL CONTENT (centered, fades in after the intro) -->
+<main class="page">
 
-   <div class="web">
-    <p>WEB DEVELOPER</p>
-   </div>
-   <input type="checkbox" id="change">
-      <div class="Developers">
-        <label for="change" class="first">
-          <p class="aaa">Molina</p>
-        <img src="../Images/me1.jpg"s id="Developer" width="140px"  height="160px"></label>
-        <a href="../Devjessa/jessa.html"> <!---->
-        <p class="aaa">Olavides</p>
-        <img src="../Images/jess1.jpg" id="DeveloperArd" width="140px"  height="160px"></a>
-          
-        <a href="../Devleal/devleal.html">
-        <p class="aaa">Leal</p>
-        <img src="../Images/leal1.jpg" id="DeveloperArds" width="140px"></a>
-        
-              <a href="../Iris/Iris.html">
-        <p class="aaa">Pingul</p>
-        <img src="../Images/iris1.jpg" id="DeveloperArds" width="140px"></a>
-             
-            <a href="../Khen/khen.html">
-        <p class="aaa">Laxamana</p>
-        <img src="../Images/khen1.jpg" id="DeveloperArds" width="140px" height="160px"></a>
+  <div class="web"><p>WEB DEVELOPER</p></div>
 
-        <label for="change" class="second">
-        <img src="../Images/me1.jpg" id="Developer2" width="150px"></label>
-        <div class="text">
-            <h2>Jason Manuel R. Molina </h2>
-            <p>3rd Year — Bachelor of Science in Computer Science</p><br>
-           
-            <a href="https://hedgehog-m6x2hc.my.canva.site/"><p>View my personal information</p></a>
-            </div>
-            <div class="content">
-              <h2>My Family</h2>
-              <div class="Family">
-              <img src="../Images/fam6.jpg">
-              <h2>Friends</h2>
-            </div>
-            <div class="friends">
-               <img src="../Images/fam1.jpg" >
-                 <img src="../Images/fam2.jpg">
-                 <img src="../Images/fam3.jpg">
-                    <img src="../Images/fam4.jpg" >
-                   <img src="../Images/fam5.jpg" >
-               <img src="../Images/fams1.jpg">
-                   <img src="../Images/fg.jpg" >
-                    <img src="../Images/f3.jpg" >
-            </div>
-        </div>
-   
+  <!-- Developer picks -->
+  <div class="Developers" id="devs">
+    <div class="dev" id="open-profile" role="button" tabindex="0">
+      <p class="aaa">Molina</p>
+      <img src="../Images/me1.jpg" id="Developer" width="140" height="160" alt="Molina">
+    </div>
+    <a href="../Devjessa/jessa.html">
+      <p class="aaa">Olavides</p>
+      <img src="../Images/jess1.jpg" id="DeveloperArd" width="140" height="160" alt="Olavides">
+    </a>
+    <a href="../Devleal/devleal.html">
+      <p class="aaa">Leal</p>
+      <img src="../Images/leal1.jpg" id="DeveloperArds" width="140" alt="Leal">
+    </a>
+    <a href="../Iris/Iris.html">
+      <p class="aaa">Pingul</p>
+      <img src="../Images/iris1.jpg" id="DeveloperArds" width="140" alt="Pingul">
+    </a>
+    <a href="../Khen/khen.html">
+      <p class="aaa">Laxamana</p>
+      <img src="../Images/khen1.jpg" id="DeveloperArds" width="140" height="160" alt="Laxamana">
+    </a>
+  </div>
 
+  <!-- Profile (shown after clicking the photo) -->
+  <section class="profile" id="profile" hidden>
+    <div class="profile-top">
+      <img src="../Images/jason.jpg" class="photo" id="close-profile" width="200" alt="Jason Molina" title="Click to go back">
+
+      <div class="info">
+        <h2>Jason Manuel R. Molina</h2>
+        <p class="course">3rd Year — Bachelor of Science in Computer Science</p>
+        <dl>
+          <dt>Name:</dt>       <dd>Jason Manuel R. Molina</dd>
+          <dt>Address:</dt>    <dd>Blk 118 lot 45 Villazaragosa brgy. Turo bocaue bulacan</dd>
+          <dt>Age:</dt>        <dd>20</dd>
+          <dt>Contact no.:</dt><dd>09704844828</dd>
+          <dt>Email add.:</dt> <dd>jasonmanuelmolina@gmail.com</dd>
+        </dl>
+        <a class="more" href="https://hedgehog-m6x2hc.my.canva.site/">View my personal information</a>
+      </div>
+    </div>
+
+    <div class="tabs">
+      <button class="tab active" data-target="family">My Family</button>
+      <button class="tab" data-target="friends">Friends</button>
+    </div>
+
+    <div class="content">
+      <div class="gallery Family" id="family">
+        <img src="../Images/fam6.jpg" alt="My family">
+      </div>
+      <div class="gallery friends" id="friends" hidden>
+        <img src="../Images/fam1.jpg" alt="">
+        <img src="../Images/fam2.jpg" alt="">
+        <img src="../Images/fam3.jpg" alt="">
+        <img src="../Images/fam4.jpg" alt="">
+        <img src="../Images/fam5.jpg" alt="">
+        <img src="../Images/fams1.jpg" alt="">
+        <img src="../Images/fg.jpg" alt="">
+        <img src="../Images/f3.jpg" alt="">
+      </div>
+    </div>
+  </section>
+</main>
+
+<script>
+/* ===== Header intro animation (same as index) ===== */
+window.addEventListener('load', () => {
+  const top   = document.querySelector('.top');
+  const brand = top.querySelector('.brand');
+  const btns  = top.querySelector('.buttos');
+  const finish = () => {
+    document.body.classList.remove('playing');
+    document.body.classList.add('ready');
+  };
+
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    top.classList.remove('intro'); finish(); return;
+  }
+
+  setTimeout(() => {
+    const b1 = brand.getBoundingClientRect();
+    const n1 = btns.getBoundingClientRect();
+    top.classList.remove('intro');
+    const b2 = brand.getBoundingClientRect();
+    const n2 = btns.getBoundingClientRect();
+
+    brand.style.transition = btns.style.transition = 'none';
+    brand.style.transform = `translate(${b1.left - b2.left}px, ${b1.top - b2.top}px) scale(${b1.width / b2.width})`;
+    btns.style.transform  = `translate(${n1.left - n2.left}px, ${n1.top - n2.top}px)`;
+    void top.offsetWidth;
+
+    const t = 'transform 1s cubic-bezier(.65,0,.35,1)';
+    brand.style.transition = btns.style.transition = t;
+    brand.style.transform = btns.style.transform = '';
+    setTimeout(finish, 1000);
+  }, 1200);
+});
+
+/* ===== Profile open/close ===== */
+const devs = document.getElementById('devs');
+const profile = document.getElementById('profile');
+const webLabel = document.querySelector('.web');
+
+function openProfile(){ devs.hidden = true; webLabel.hidden = true; profile.hidden = false; }
+function closeProfile(){ profile.hidden = true; devs.hidden = false; webLabel.hidden = false; }
+
+const opener = document.getElementById('open-profile');
+opener.addEventListener('click', openProfile);
+opener.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') openProfile(); });
+document.getElementById('close-profile').addEventListener('click', closeProfile);
+
+/* ===== Family / Friends tabs ===== */
+document.querySelectorAll('.tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    document.querySelectorAll('.tab').forEach(t => t.classList.toggle('active', t === tab));
+    document.querySelectorAll('.gallery').forEach(g => g.hidden = g.id !== tab.dataset.target);
+  });
+});
+</script>
 </body>
 </html>

@@ -4,104 +4,108 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>THE UNIVERSITY OF MANILA</title>
-<link rel="icon"  type="image/jpg" href="../Images/UM.jpg">
-      <link rel="stylesheet" href="../Home/index.css">
-      <link rel="stylesheet" href="Com.css">
+    <link rel="icon" type="image/jpg" href="../Images/UM.jpg">
+    <link rel="stylesheet" href="../Home/index.css">
+    <link rel="stylesheet" href="Com.css">
 </head>
-<body>
+<body class="ready">
 
-<div class="buttos">
-  <a href="../GT.html">
-    <button><span class="nav-btn">Back</span></button>
-  </a>
-         <a href="../Home/index.html">
-    <button><span class="nav-btn">History</span></button>
-  </a>
-  <a href="../Mission/mission.html">
-    <button><span class="nav-btn">UM Mission</span></button>
-  </a>
-  <a href="../Vision/vision.html">
-    <button><span class="nav-btn">UM Vision</span></button>
-  </a>
-  <a href="../Motto/motto.html">
-    <button><span class="nav-btn">UM Motto</span></button>
-  </a>
-  <a href="../Prof/prof.html">
-    <button><span class="nav-btn">Professor</span></button>
-  </a>
-  <a href="../Csevent/Com.html">
-    <button><span class="nav-btn">Computer Science</span></button>
-  </a>
-  <a href="../Devjason/Developerjason.html">
-    <button><span class="nav-btn">Developer</span></button>
-  </a>
-  <a href="../OperatingSystem/OS.html">
-    <button><span class="nav-btn">Operating System</span></button>
-  </a>
-</div>
-    
-  <div class="container">
-    <img src="../Images/newlogo.jpg" alt="" id="ums" width="200px">
-    
+<!-- HEADER: logo, title and buttons in the upper left (same as OS and Motto pages) -->
+<header class="top">
+  <div class="brand">
+    <div class="container">
+      <img src="../Images/newlogo.jpg" alt="University of Manila logo" id="ums">
     </div>
-</div>
- 
     <div class="title">
       <div class="name">
-      <h3>Patria</h3>
-        <h3>-</h3>
-        <h3>Scientia</h3>
-        <h3>-</h3>
-          <h3>Virtus</h3>
-          </div>
-    <h2>THE  UNIVERSITY OF MANILA </h2>
-
+        <h3>Patria</h3><h3>-</h3><h3>Scientia</h3><h3>-</h3><h3>Virtus</h3>
+      </div>
+      <h2>THE UNIVERSITY OF MANILA</h2>
+    </div>
   </div>
 
+  <nav class="buttos">
+    <a href="../GT.html"><button><span class="nav-btn">Back</span></button></a>
+    <a href="../Home/index.html"><button><span class="nav-btn">History</span></button></a>
+    <a href="../Mission/mission.html"><button><span class="nav-btn">UM Mission</span></button></a>
+    <a href="../Vision/vision.html"><button><span class="nav-btn">UM Vision</span></button></a>
+    <a href="../Motto/motto.html"><button><span class="nav-btn">UM Motto</span></button></a>
+    <a href="../Prof/prof.html"><button><span class="nav-btn">Professor</span></button></a>
+    <a href="../Csevent/Com.html"><button><span class="nav-btn">Computer Science</span></button></a>
+    <a href="../Devjason/Developerjason.html"><button><span class="nav-btn">Developer</span></button></a>
+    <a href="../OperatingSystem/OS.html"><button><span class="nav-btn">Operating System</span></button></a>
+  </nav>
+</header>
 
-    <div class="Computer">
-        <p id="p1">College of Computer Science</p>
+<!-- CONTENT -->
+<main class="cs-page">
+
+  <section class="Computer">
+    <p class="intro-label">College of Computer Science</p>
     <h1>Computer Science Department</h1>
-    <p id="p2">On October 5, 1913, a group of four young men and a woman, with ages from fifteen to twenty-one, met for breakfast at the br Palma <br>
-         de Mallorca, a popular restaurant beside the Sto. Domingo Church in Intramuros, Manila. The five were Dr. Apolinario G. de los Santos, <br> his brother Dr. Mariano V. de los Santos, his sister Maria de los Santos, and two friends Dr. Buenaventura J. Bello and Atty. Antonio Rivero.</p>
-    <p id="p2">We offer academic programs leading to the degree of  <i>Bachelor of Science in Computer Science</i> and <i>Associate in Computer Technology.</i></p>
-    </div>    
-    
+    <p class="intro">On October 5, 1913, a group of four young men and a woman, with ages from fifteen to twenty-one, met for breakfast at the Palma de Mallorca, a popular restaurant beside the Sto. Domingo Church in Intramuros, Manila. The five were Dr. Apolinario G. de los Santos, his brother Dr. Mariano V. de los Santos, his sister Maria de los Santos, and two friends Dr. Buenaventura J. Bello and Atty. Antonio Rivero.</p>
+    <p class="intro">We offer academic programs leading to the degree of <i>Bachelor of Science in Computer Science</i> and <i>Associate in Computer Technology.</i></p>
+  </section>
+
+  <!-- Buttons -->
+  <div class="cs-tabs">
+    <button class="cs-tab active" data-target="mv">CS Mission &amp; Vision</button>
+    <button class="cs-tab" data-target="obj">Objectives</button>
+    <button class="cs-tab" data-target="ev">Events</button>
+  </div>
+
+  <!-- Panel 1: Mission and Vision together -->
+  <section class="cs-panel" id="mv">
     <div class="csmission">
-        <h1>CS Mission</h1>
-        <p>Provide quality undergraduate and graduate education in both the theoretical and applied foundations of computer science and train  <br>
-            students to effectively apply this education to solve real-world problems, amplifying their potential for lifelong high-quality careers <br>
-             and giving them a competitive advantage in the ever-changing and challenging global work environment of the 21st century.</p>
+      <h1>CS Mission</h1>
+      <p>Provide quality undergraduate and graduate education in both the theoretical and applied foundations of computer science and train students to effectively apply this education to solve real-world problems, amplifying their potential for lifelong high-quality careers and giving them a competitive advantage in the ever-changing and challenging global work environment of the 21st century.</p>
     </div>
 
-<div class="csvision">
-    <h1>CS Vision</h1>
-    <p>Build a strong research and teaching environment that responds swiftly to the challenges of the 21st century.</p>
-</div>
+    <div class="csvision">
+      <h1>CS Vision</h1>
+      <p>Build a strong research and teaching environment that responds swiftly to the challenges of the 21st century.</p>
+    </div>
+  </section>
 
-    
-<div class="Objectives">
-    <h1>General Objectives</h1>
-    <p>To produce technological and scientifically empowered professionals, 
-         information technology and computer science experts whose 
-         <br> breadth and depth of orientation, knowledge, and training are within global standards — committed to share their expertise with the 
-        <br> various sectors of the academic community and the community at large, ever motivated by the UM trilogy of ideals.</p>
-       
-       <h1>Specific Objectives</h1>
-       <p>To equip students with the skills and competencies in information communications technology, its operation, language, and design. 
-        <br> To prepare graduates with a solid foundation on the various languages, programs, and systems to enable them to perform with 
-        <br>confidence the varied tasks expected of them in global organizations of the corporate world.</p>
-</div>
-       <content class="Event">
-                <h2>UM EVENT & CS EVENT </h2>
-                <img src="../Images/Acquaintance.jpg">
-                <img src="../Images/Christmas_Bingo_Bonanza.jpg" >
-                <img  src="../Images/Foundation_day.jpg">
-                <img  src="../Images/Cleanup.jpg">
-                <img src="../Images/intrams.jpg">
-                <img src="../Images/pagbigkas.jpg">
-                <img src="../Images/Sportsfest.jpg">
-                <img src="../Images/farewell.jpg">
-       </content>
+  <!-- Panel 2: Objectives -->
+  <section class="cs-panel" id="obj" hidden>
+    <div class="Objectives">
+      <h1>General Objectives</h1>
+      <p>To produce technological and scientifically empowered professionals, information technology and computer science experts whose breadth and depth of orientation, knowledge, and training are within global standards, committed to share their expertise with the various sectors of the academic community and the community at large, ever motivated by the UM trilogy of ideals.</p>
+
+      <h1>Specific Objectives</h1>
+      <p>To equip students with the skills and competencies in information communications technology, its operation, language, and design. To prepare graduates with a solid foundation on the various languages, programs, and systems to enable them to perform with confidence the varied tasks expected of them in global organizations of the corporate world.</p>
+    </div>
+  </section>
+
+  <!-- Panel 3: Events -->
+  <section class="cs-panel" id="ev" hidden>
+    <div class="Event">
+      <h2>UM EVENT &amp; CS EVENT</h2>
+      <img src="../Images/Acquaintance.jpg" alt="Acquaintance">
+      <img src="../Images/Christmas_Bingo_Bonanza.jpg" alt="Christmas Bingo Bonanza">
+      <img src="../Images/Foundation_day.jpg" alt="Foundation Day">
+      <img src="../Images/Cleanup.jpg" alt="Cleanup">
+      <img src="../Images/intrams.jpg" alt="Intrams">
+      <img src="../Images/pagbigkas.jpg" alt="Pagbigkas">
+      <img src="../Images/Sportsfest.jpg" alt="Sportsfest">
+      <img src="../Images/farewell.jpg" alt="Farewell">
+    </div>
+  </section>
+
+</main>
+
+<script>
+/* Show only the panel that matches the clicked button */
+const csTabs = document.querySelectorAll('.cs-tab');
+const csPanels = document.querySelectorAll('.cs-panel');
+
+csTabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+    csTabs.forEach(t => t.classList.toggle('active', t === tab));
+    csPanels.forEach(p => p.hidden = p.id !== tab.dataset.target);
+  });
+});
+</script>
 </body>
 </html>

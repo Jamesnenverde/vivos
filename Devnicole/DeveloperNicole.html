@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THE UNIVERSITY OF MANILA</title>
+    <link rel="icon" type="image/jpg" href="../Images/UM.jpg" id="icon">
+    <link rel="stylesheet" href="../Home/index.css">
+    <link rel="stylesheet" href="dev.css">
+</head>
+<body class="ready">
+
+<!-- HEADER -->
+<header class="top">
+  <div class="brand">
+    <div class="container">
+      <img src="../Images/newlogo.jpg" alt="University of Manila logo" id="ums">
+    </div>
+    <div class="title">
+      <div class="name">
+        <h3>Patria</h3><h3>-</h3><h3>Scientia</h3><h3>-</h3><h3>Virtus</h3>
+      </div>
+      <h2>THE UNIVERSITY OF MANILA</h2>
+    </div>
+  </div>
+
+  <nav class="buttos">
+    <a href="../GT.html"><button><span class="nav-btn">Back</span></button></a>
+    <a href="../Home/index.html"><button><span class="nav-btn">History</span></button></a>
+    <a href="../Mission/mission.html"><button><span class="nav-btn">UM Mission</span></button></a>
+    <a href="../Vision/vision.html"><button><span class="nav-btn">UM Vision</span></button></a>
+    <a href="../Motto/motto.html"><button><span class="nav-btn">UM Motto</span></button></a>
+    <a href="../Prof/prof.html"><button><span class="nav-btn">Professor</span></button></a>
+    <a href="../Csevent/Com.html"><button><span class="nav-btn">Computer Science</span></button></a>
+    <a href="../Devjason/Developerjason.html"><button><span class="nav-btn">Developer</span></button></a>
+    <a href="../OperatingSystem/OS.html"><button><span class="nav-btn">Operating System</span></button></a>
+  </nav>
+</header>
+
+<!-- CONTENT -->
+<main class="page">
+
+  <div class="web"><p>WEB DEVELOPER</p></div>
+
+  <!-- Profile -->
+  <section class="profile" id="profile">
+    <div class="profile-top">
+      <img src="../Images/leal1.jpg" class="photo" id="close-profile" width="200" alt="Nicole L. Leal" title="Click to go back">
+
+      <div class="info">
+        <h2>Nicole L. Leal</h2>
+        <p class="course">Bachelor of Science in Computer Science</p>
+        <dl>
+          <dt>Full Name:</dt>     <dd>Nicole L. Leal</dd>
+          <dt>Age:</dt>           <dd>20</dd>
+          <dt>Address:</dt>       <dd>219 B. San Nicolas St. Binondo Manila, Brgy. 283 Zone 1010</dd>
+          <dt>Contact Number:</dt><dd>09453940244</dd>
+          <dt>Email Address:</dt> <dd>labadannicole4@gmail.com</dd>
+        </dl>
+         <a class="more" href="">View my personal information</a>
+      </div>
+    </div>
+
+    <div class="tabs">
+      <button class="tab active" data-target="family">My Family</button>
+      <button class="tab" data-target="friends">Friends</button>
+    </div>
+
+    <div class="content">
+      <div class="gallery Family" id="family">
+        <img src="../Images/lealfam.jpg" alt="My family">
+      </div>
+      <div class="gallery friends" id="friends" hidden>
+        <img src="../Images/nicsf1.jpg" alt="">
+        <img src="../Images/nicsf2.jpg" alt="">
+        <img src="../Images/nicsf3.jpg" alt="">
+        <img src="../Images/nicsf4.jpg" alt="">
+        <img src="../Images/nicsf5.jpg" alt="">
+      </div>
+    </div>
+  </section>
+</main>
+
+<script>
+/* Clicking the photo goes back to the developer page */
+document.getElementById('close-profile').addEventListener('click', () => {
+  window.location.href = '../Devjason/Developerjason.html';
+});
+
+/* Family / Friends tabs */
+document.querySelectorAll('.tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    document.querySelectorAll('.tab').forEach(t => t.classList.toggle('active', t === tab));
+    document.querySelectorAll('.gallery').forEach(g => g.hidden = g.id !== tab.dataset.target);
+  });
+});
+</script>
+</body>
+</html>

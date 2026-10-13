@@ -1,0 +1,169 @@
+[hidden]{ display: none !important; }
+
+/* ===== Developer picks ===== */
+.Developers{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+    width: 100%;
+}
+.Developers a, .Developers .dev{ text-decoration: none; text-align: center; cursor: pointer; }
+.Developers p{
+    color: wheat;
+    margin: 0 0 8px;
+    text-align: center;
+}
+#Developer, #DeveloperArd, #DeveloperArds{
+    border-radius: 20px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: 0.2s;
+}
+#DeveloperArd, #DeveloperArds{ width: 120px; }
+#Developer:hover, #DeveloperArd:hover, #DeveloperArds:hover{
+    transform: translateY(20px);
+    border-radius: 40px;
+}
+
+.web{
+    color: goldenrod;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    border-radius: 0 50px;
+}
+.web p{
+    color: darkseagreen;
+    font-weight: bolder;
+    font-size: 20px;
+    font-style: italic;
+}
+
+/* ===== Profile ===== */
+.profile{
+    width: 90%;
+    max-width: 900px;
+    margin: 30px 0 50px;
+    color: wheat;
+}
+
+/* photo in the right corner, info beside it */
+.profile-top{
+    display: flex;
+    flex-direction: row-reverse;     /* photo -> right */
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 24px;
+}
+.photo{
+    width: 200px;
+    max-width: 35%;
+    height: auto;
+    border-radius: 20px;
+    object-fit: cover;
+    cursor: pointer;
+    flex-shrink: 0;
+    border: 4px solid darkseagreen;
+    transition: 0.2s;
+}
+.photo:hover{ border-radius: 40px; }
+
+.info{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;   /* info + link stay on the left */
+    text-align: left;
+}
+.info dl{ width: 100%; }
+.info h2{ margin: 0 0 4px; color: wheat; }
+.info .course{ margin: 0 0 16px; color: darkseagreen; font-weight: bold; }
+.info dl{
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: 8px 14px;
+    margin: 0 0 16px;
+}
+.info dt{ font-weight: bold; color: goldenrod; }
+.info dd{ margin: 0; word-break: break-word; }
+.more{
+    display: block;
+    align-self: flex-start;
+    text-align: left;
+    color: goldenrod;
+    font-style: italic;
+}
+
+/* ===== Tabs ===== */
+.tabs{
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin: 30px 0 0;
+}
+.tab{
+    padding: .6em 1.4em;
+    border: 2px solid #000;
+    border-radius: .6em;
+    background: #e8e8e8;
+    font-weight: bold;
+    cursor: pointer;
+}
+.tab.active{ background: darkseagreen; }
+
+/* ===== Gallery ===== */
+.content{
+    position: relative;
+    isolation: isolate;
+    margin-top: 20px;
+    padding: 24px;
+    background: darkseagreen;
+    border-radius: 20px;
+    overflow: hidden;
+}
+/* Animated border */
+.content::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    padding: 8px;
+    border-radius: inherit;
+    background: repeating-conic-gradient(
+        from var(--angle, 0deg),
+        #fffb0096 0deg 10deg,
+        #00ffcc 10deg 20deg,
+        #7b2ff7 20deg 30deg,
+        #ff0080 30deg 40deg,
+        #fffb0096 40deg 50deg
+    );
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    animation: borderMove 4s linear infinite;
+    pointer-events: none;
+    z-index: -1;
+}
+@property --angle{ syntax: "<angle>"; initial-value: 0deg; inherits: false; }
+@keyframes borderMove{ to{ --angle: 360deg; } }
+
+.gallery{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+.Family img{ width: 100%; max-width: 400px; height: auto; border-radius: 10px; }
+.friends img{ width: 200px; max-width: 100%; height: 250px; object-fit: cover; border-radius: 10px; }
+
+@media (max-width: 700px){
+    .web{ width: 100%; }
+    .profile-top{ gap: 12px; }
+    .photo{ width: 120px; max-width: 38%; }
+    .info dl{ grid-template-columns: 1fr; gap: 2px; }
+    .info dd{ margin-bottom: 8px; }
+    .content{ padding: 10px; }
+}

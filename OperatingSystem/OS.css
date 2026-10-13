@@ -52,6 +52,7 @@
     border-left: 5px solid darkgoldenrod;
       border-right: 50px solid darkgoldenrod;
       transition: 0.4;
+    transform: translateY(-15px);
 }
 
 .ver1:hover{
@@ -143,4 +144,12 @@
     color: darkgoldenrod;
     font-weight: bold;
     border-bottom: 2px solid darkgoldenrod;
+}
+.os-content{
+    position: relative;
+    z-index: 5;
+    opacity: 1;
+    visibility: visible;
+    margin-top: 220px;
+    text-align: center;
 }

@@ -150,6 +150,49 @@
     z-index: 5;
     opacity: 1;
     visibility: visible;
-    margin-top: 220px;
+
+    /* fixed width, centered on the page */
+    width: min(1000px, 92%);
+    margin: 220px auto 40px;
+    box-sizing: border-box;
     text-align: center;
+}
+
+/* tabs centered */
+.selection{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 0 0 30px;
+}
+
+/* every OS section takes the full width, so none of them change size */
+.os-section{
+    width: 100%;
+}
+
+/* intro text centered and the same width for all three OS */
+.Macos p,
+.Windows p,
+.Linux p{
+    text-align: center;
+    max-width: 800px;
+}
+
+/* version cards centered and full width */
+.version{
+    width: 100%;
+    max-width: 800px;
+    margin: 30px auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.version p.ver1{
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    text-align: left;
 }

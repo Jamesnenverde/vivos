@@ -1,4 +1,11 @@
-
+.page{
+    opacity: 1 !important;
+    visibility: visible !important;
+    position: relative;
+    z-index: 5;
+    margin-top: 200px;   /* keeps content below the header/nav */
+    text-align: center;
+}
 
 .PROF{
     display: flex;

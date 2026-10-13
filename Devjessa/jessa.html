@@ -4,93 +4,134 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>THE UNIVERSITY OF MANILA</title>
-   <link rel="icon"  type="image/jpg" href="../Images/UM.jpg">
-        <link rel="stylesheet" href="../Home/index.css">
-      <link rel="stylesheet" href="Ard.css">
+    <link rel="icon" type="image/jpg" href="../Images/UM.jpg" id="icon">
+    <link rel="stylesheet" href="../Home/index.css">
+    <link rel="stylesheet" href="Ard.css">
 </head>
-<body>
-<div class="buttos">
-  <a href="../GT.html">
-    <button><span class="nav-btn">Back</span></button>
-  </a>
-         <a href="../Home/index.html">
-    <button><span class="nav-btn">History</span></button>
-  </a>
-  <a href="../Mission/mission.html">
-    <button><span class="nav-btn">UM Mission</span></button>
-  </a>
-  <a href="../Vision/vision.html">
-    <button><span class="nav-btn">UM Vision</span></button>
-  </a>
-  <a href="../Motto/motto.html">
-    <button><span class="nav-btn">UM Motto</span></button>
-  </a>
-  <a href="../Prof/prof.html">
-    <button><span class="nav-btn">Professor</span></button>
-  </a>
-  <a href="../Csevent/Com.html">
-    <button><span class="nav-btn">Computer Science</span></button>
-  </a>
-  <a href="../Devjason/Developerjason.html">
-    <button><span class="nav-btn">Developer</span></button>
-  </a>
-  <a href="../OperatingSystem/OS.html">
-    <button><span class="nav-btn">Operating System</span></button>
-  </a>
-</div>
-</div>
-  <div class="container">
-    <img src="../Images/newlogo.jpg" alt="" id="ums" width="200px">
-    
+<body class="ready">
+
+<!-- HEADER: starts centered (intro), then animates to the upper-left -->
+<header class="top">
+  <div class="brand">
+    <div class="container">
+      <img src="../Images/newlogo.jpg" alt="University of Manila logo" id="ums">
     </div>
-</div>
- 
     <div class="title">
       <div class="name">
-      <h3>Patria</h3>
-        <h3>-</h3>
-        <h3>Scientia</h3>
-        <h3>-</h3>
-          <h3>Virtus</h3>
-          </div>
-    <h2>THE  UNIVERSITY OF MANILA </h2>
-
+        <h3>Patria</h3><h3>-</h3><h3>Scientia</h3><h3>-</h3><h3>Virtus</h3>
+      </div>
+      <h2>THE UNIVERSITY OF MANILA</h2>
+    </div>
   </div>
 
+  <nav class="buttos">
+    <a href="../GT.html"><button><span class="nav-btn">Back</span></button></a>
+    <a href="../Home/index.html"><button><span class="nav-btn">History</span></button></a>
+    <a href="../Mission/mission.html"><button><span class="nav-btn">UM Mission</span></button></a>
+    <a href="../Vision/vision.html"><button><span class="nav-btn">UM Vision</span></button></a>
+    <a href="../Motto/motto.html"><button><span class="nav-btn">UM Motto</span></button></a>
+    <a href="../Prof/prof.html"><button><span class="nav-btn">Professor</span></button></a>
+    <a href="../Csevent/Com.html"><button><span class="nav-btn">Computer Science</span></button></a>
+    <a href="../Devjason/Developerjason.html"><button><span class="nav-btn">Developer</span></button></a>
+    <a href="../OperatingSystem/OS.html"><button><span class="nav-btn">Operating System</span></button></a>
+  </nav>
+</header>
 
-   
-   <div class="web">
-    <p> WEB DEVELOPER</p>
-   </div>
-      <div class="Developers">
-       
-                <a href="../Devjason/Developerjason.html">
-        <img src="../Images/jess1.jpg" id="Developerjessa" ></a>
-      
-        <div class="text">
-            <h2>Jessa Jane P. Olavides</h2>
-            <p>3rd Year — Bachelor of Science in Computer Science</p><br>
-            
-       <p>View my personal information</p></a>
-            </div>
-            <div class="content">
-              <h2>My Family</h2>
-              <div class="Family">
-                <img src="../Images/jessfam.jpg" id="F" width="130px">
-              <h2>Friends</h2>
-            </div>
-                <div class="friends">
-               <img src="../Images/jessf1.jpg"  >
-                 <img src="../Images/jessf2.jpg" >
-                 <img src="../Images/jessf3.jpg"  >
-                    <img src="../Images/jessf4.jpg" >
-                   <img src="../Images/jessf5.jpg"  >
-               <img src="../Images/khenf5.jpg" >
-                   <img src="../Images/khenf1.jpg"  >
-                    <img src="../Images/khenf2.jpg"  >
-            </div>
-        </div>
-   
+<!-- ALL CONTENT (centered, fades in after the intro) -->
+<main class="page">
 
+  <div class="web"><p>WEB DEVELOPER</p></div>
+
+  <!-- Developer picks -->
+  <div class="Developers" id="devs">
+    <a href="../Devjason/Developerjason.html">
+      <p class="aaa">Molina</p>
+      <img src="../Images/me1.jpg" id="DeveloperArd" width="140" height="160" alt="Molina">
+    </a>
+    <div class="dev" id="open-profile" role="button" tabindex="0">
+      <p class="aaa">Olavides</p>
+      <img src="../Images/jess1.jpg" id="Developer" width="140" height="160" alt="Olavides">
+    </div>
+    <a href="../Devleal/devleal.html">
+      <p class="aaa">Leal</p>
+      <img src="../Images/leal1.jpg" id="DeveloperArds" width="140" alt="Leal">
+    </a>
+    <a href="../Iris/Iris.html">
+      <p class="aaa">Pingul</p>
+      <img src="../Images/iris1.jpg" id="DeveloperArds" width="140" alt="Pingul">
+    </a>
+    <a href="../Khen/khen.html">
+      <p class="aaa">Laxamana</p>
+      <img src="../Images/khen1.jpg" id="DeveloperArds" width="140" height="160" alt="Laxamana">
+    </a>
+  </div>
+
+  <!-- Profile (shown after clicking the photo) -->
+  <section class="profile" id="profile" hidden>
+    <div class="profile-top">
+      <img src="../Images/jess1.jpg" class="photo" id="close-profile" width="200" alt="Jessa Olavides" title="Click to go back">
+
+      <div class="info">
+        <h2>Jessa Jane P. Olavides</h2>
+        <p class="course">3rd Year — Bachelor of Science in Computer Science</p>
+        <dl>
+          <dt>Full Name:</dt>     <dd>Jessa Jane P. Olavides</dd>
+          <dt>Age:</dt>           <dd>21</dd>
+          <dt>Address:</dt>       <dd>146 B E Dela Paz Sanroque Marikina City</dd>
+          <dt>Contact Number:</dt><dd>09958193214</dd>
+          <dt>Email Address:</dt> <dd>jessaolavides5@gmail.com</dd>
+        </dl>
+      </div>
+    </div>
+
+    <div class="tabs">
+      <button class="tab active" data-target="family">My Family</button>
+      <button class="tab" data-target="friends">Friends</button>
+    </div>
+
+    <div class="content">
+      <div class="gallery Family" id="family">
+        <img src="../Images/jessfam.jpg" id="F" alt="My family">
+      </div>
+      <div class="gallery friends" id="friends" hidden>
+        <img src="../Images/jessf1.jpg" alt="">
+        <img src="../Images/jessf2.jpg" alt="">
+        <img src="../Images/jessf3.jpg" alt="">
+        <img src="../Images/jessf4.jpg" alt="">
+        <img src="../Images/jessf5.jpg" alt="">
+        <img src="../Images/khenf5.jpg" alt="">
+        <img src="../Images/khenf1.jpg" alt="">
+        <img src="../Images/khenf2.jpg" alt="">
+      </div>
+    </div>
+  </section>
+</main>
+
+<script>
+/* ===== Profile open/close ===== */
+const devs = document.getElementById('devs');
+const profile = document.getElementById('profile');
+const webLabel = document.querySelector('.web');
+
+function openProfile(){ devs.hidden = true; webLabel.hidden = true; profile.hidden = false; }
+function closeProfile(){ profile.hidden = true; devs.hidden = false; webLabel.hidden = false; }
+
+const opener = document.getElementById('open-profile');
+opener.addEventListener('click', openProfile);
+opener.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') openProfile(); });
+openProfile();   // go straight to the info
+// clicking Jessa's photo goes back to the developer page
+document.getElementById('close-profile').addEventListener('click', () => {
+  window.location.href = '../Devjason/Developerjason.html';
+});
+
+/* ===== Family / Friends tabs ===== */
+document.querySelectorAll('.tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    document.querySelectorAll('.tab').forEach(t => t.classList.toggle('active', t === tab));
+    document.querySelectorAll('.gallery').forEach(g => g.hidden = g.id !== tab.dataset.target);
+  });
+});
+</script>
 </body>
 </html>

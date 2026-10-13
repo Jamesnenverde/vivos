@@ -1,5 +1,3 @@
-
-
 .missions{
     background-color: darkseagreen;
     flex-wrap: wrap;
@@ -11,9 +9,7 @@
     width: 70%;
     margin-top: 50px;
     padding: 50px;
-    
 }
-
 
 .ace{
     min-width: 90%;
@@ -22,13 +18,12 @@
     margin-top: 10px;
     margin-left: 5px;
 }
+
 h4{
     color: darkgoldenrod;
     font-weight: bolder;
     font-size: 25px;
-    margin-left: 40px ;
     margin: 10px;
-    
 }
 
 h3{
@@ -41,6 +36,14 @@ p{
     font-size: large;
     margin-left: 10px;
 }
+
+.name{
+    flex-wrap: wrap;
+    color: whitesmoke;
+    margin-bottom: 15px;
+}
+
+/* ---------- FLIP CARDS ---------- */
 .Box1{
     margin-top: 25px;
     display: flex;
@@ -51,194 +54,103 @@ p{
     gap: 20px;
 }
 
-.A{
-     flex-wrap: wrap;
+.card{
     width: 300px;
-    background-color:darkslategrey;
-     border: 5px double whitesmoke;
-     border-radius: 10px;
-     height: 260px;
-     padding-left: 15px;
-   
-     transition: 0.5s;
-    
-}
-.A:hover{
-    border: 5px dashed whitesmoke;
-     background-color:darkslategrey;
-    box-shadow: 2px 2px 7px  yellowgreen;
-    border-radius: 50px;
-  
+    height: 260px;
+    perspective: 1000px;
+    cursor: pointer;
 }
 
- .A p{
-   color:darkgoldenrod;
-    font-weight: bolder;
-    padding-left: 10px;
-    margin: 5px;
- }
-.A h2{
-   
-     flex-wrap: wrap;
-    margin-top: 30px;
-    color: white;
-    font-size: 80px;
-padding: 10px;
-  margin: 0 ; 
-  transition: 0.2s;
-}
- .A h2:hover{
-    color: black;
-     text-shadow: 1px 2px 7px red;
- }
- .name{
-    flex-wrap: wrap;
-    color: whitesmoke;
-    margin-bottom: 15px;
- }
-    
-.C{
-     
-    width: 300px;
-     background-color:darkslategrey;
-     border-radius: 10px;
-     border: 5px double whitesmoke;
-     height: 260px;
-     padding-left: 15px;
-
-    transition: 0.2s;
+.card-inner{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.7s;
+    transform-style: preserve-3d;
 }
 
-.C:hover{
-       border: 5px dashed whitesmoke;
-     background-color:darkslategrey;
-    box-shadow: 2px 2px 7px goldenrod;
-    border-radius: 50px;
+.card.flipped .card-inner{
+    transform: rotateY(180deg);
 }
- .C p{
-    color:darkgoldenrod;
-    font-weight: bolder;
-    padding-left: 10px;
-    margin: 5px;
- }
-.C h2{
-    flex-wrap: wrap;
-    margin-top: 30px;
-    color: white;
-    font-size: 80px;
-    margin: 5px 0; 
-padding: 10px;
 
-}
-.C h2:hover{
-    color: black;
-     text-shadow: 1px 2px 7px red;
- }
- 
-
- .names{
-    color: whitesmoke;
-    margin-bottom: 15px;
- }
- 
-.E{
-     
-    width: 300px;
- order: 5px dashed whitesmoke;
-   background-color:darkslategrey;
-     border-radius: 10px;
-     height: 260px;
-     padding-left: 15px;
+.face{
+    position: absolute;
+    inset: 0;
+    box-sizing: border-box;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    background-color: darkslategrey;
     border: 5px double whitesmoke;
-    transition: 0.2s;
-}
-.E:hover{
-      border: 5px dashed whitesmoke;
-     background-color:darkslategrey;
-    box-shadow: 2px 2px 7px goldenrod;
-    border-radius: 50px;
+    border-radius: 10px;
+    padding: 10px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: auto;
+    transition: box-shadow 0.3s, border-radius 0.3s;
 }
 
- .E p{
-    color:darkgoldenrod;
+.back{
+    transform: rotateY(180deg);
+}
+
+.card:hover .face,
+.card:focus .face{
+    border-style: dashed;
+    border-radius: 30px;
+    box-shadow: 2px 2px 7px goldenrod;
+}
+
+.front p{
+    color: darkgoldenrod;
     font-weight: bolder;
     padding-left: 10px;
     margin: 5px;
- }
-.E h2{
-    margin-top: 30px;
+}
+
+.front h2{
     color: white;
     font-size: 80px;
-    margin: 5px 0; 
-padding: 10px;
-transition: 0.2s;
+    margin: 5px 0;
+    padding: 10px;
+    transition: 0.2s;
 }
- .E h2:hover{
+
+.front h2:hover{
     color: black;
-     text-shadow: 1px 2px 7px red;
- }
+    text-shadow: 1px 2px 7px red;
+}
 
-
- .namess{
+.hint{
     color: whitesmoke;
-    margin-bottom: 10px;
- }
-    
+    font-size: 13px;
+    opacity: 0.7;
+    padding-left: 10px;
+}
 
+.back p{
+    color: whitesmoke;
+    font-size: 20px;
+    font-style: oblique;
+    text-align: center;
+    margin: 0;
+}
+
+/* ---------- MOBILE ---------- */
 @media (max-width: 500px){
     .missions{
-    flex-wrap: wrap;
-    min-height: 200px;
-    height: auto;
-    margin-top: 50px;
-    border: 2px solid white;
-    border-radius: 20px;
-    color: white;
-    width: 100%;
-    padding: 10px;
-    background-color: #3b5200;
-}
+        min-height: 200px;
+        height: auto;
+        margin-top: 50px;
+        border: 2px solid white;
+        border-radius: 20px;
+        width: 100%;
+        padding: 10px;
+        background-color: #3b5200;
+    }
 
-.A{
-     flex-wrap: wrap;
-    width: 100%;
-    border: 2px solid whitesmoke;
-     border-radius: 10px;
-     height: 300px;
-     padding-left: 15px;
-    
-}
-
-.A h2{
-   
-     flex-wrap: wrap;
-    margin-top: 30px;
-    color: white;
-    font-size: 80px;
-padding: 10px;
-  margin: 0 ; 
-  transition: 0.5s;
-}
- .A h2:hover{
-    color: black;
-     text-shadow: 1px 2px 7px red;
- }
-.C{
-     
-    width: 100%;
-    border: 2px solid whitesmoke;
-     border-radius: 10px;
-     height: 300px;
-     padding-left: 15px;
-    
-}
-.E{
-     
-    width: 100%;
-    border: 2px solid whitesmoke;
-     border-radius: 10px;
-     height: 300px;
-     padding-left: 15px;
-    
-}
+    .card{
+        width: 100%;
+        height: 300px;
+    }
 }

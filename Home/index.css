@@ -9,9 +9,8 @@ body{
     flex-direction: column;
     margin: 0;
 }
-body.playing{ overflow: hidden; }
 
-/* ===== HEADER (intro -> upper-left) ===== */
+/* ===== HEADER (upper-left) ===== */
 .top{
     width: 100%;
     display: flex;
@@ -19,27 +18,20 @@ body.playing{ overflow: hidden; }
     gap: 24px;
     padding: 12px 16px;
 }
-.top.intro{
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-}
 .brand{
     display: flex;
     flex-direction: column;
     align-items: center;
     flex: 0 0 auto;
-    transform-origin: top left;
+    transform-origin: center;
     will-change: transform;
 }
 .brand .container{ margin-top: 0; }
-.top.intro #ums{ width: 200px; }
 #ums{ width: 90px; }
 
 .top .title{ text-align: center; max-width: 900px; }
-.top:not(.intro) .title h2{ font-size: 16px; }
-.top:not(.intro) .name h3{ font-size: 15px; }
+.top .title h2{ font-size: 16px; }
+.top .name h3{ font-size: 15px; }
 
 .top .buttos{
     flex: 1;
@@ -48,24 +40,45 @@ body.playing{ overflow: hidden; }
     align-self: center;
     will-change: transform;
 }
-.top.intro .buttos{
-    flex: none;
-    width: 100%;
-    max-width: 1000px;
-    margin: 24px auto 0;
+
+
+/* ===== INTRO ANIMATION (pure CSS) =====
+   Add class="animate" to <body> on any page that should play it.
+   Logo + title start in the center, glide to the upper-left,
+   nav buttons slide in beside them, then the content fades in. */
+body.animate .brand{
+    animation: brandMove 1s cubic-bezier(.65,0,.35,1) 1.2s both;
+}
+body.animate .buttos{
+    animation: navMove 1s cubic-bezier(.65,0,.35,1) 1.2s both;
+}
+body.animate .page{
+    animation: pageIn .8s ease 2.1s both;
+}
+@keyframes brandMove{
+    from{ transform: translate(calc(50vw - 50% - 16px), calc(50vh - 50% - 12px - 40px)) scale(1.8); }
+    to  { transform: none; }
+}
+@keyframes navMove{
+    from{ opacity: 0; transform: translateY(35vh); }
+    to  { opacity: 1; transform: none; }
+}
+@keyframes pageIn{
+    from{ opacity: 0; }
+    to  { opacity: 1; }
+}
+@media (prefers-reduced-motion: reduce){
+    body.animate .brand, body.animate .buttos, body.animate .page{ animation: none; }
 }
 
-/* ===== PAGE CONTENT (all centered, fades in after intro) ===== */
+/* ===== PAGE CONTENT (all centered, fades in after the animation) ===== */
 .page{
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    opacity: 0;
-    transition: opacity .8s ease;
 }
-body.ready .page{ opacity: 1; }
 
 #icon{ border: 2px solid; border-radius: 15px; }
 
@@ -81,7 +94,7 @@ body.ready .page{ opacity: 1; }
 
 .container{ display: flex; gap: 30px; margin-top: 30px; }
 #ums{ border: 10px solid green; border-radius: 100%; }
-.top:not(.intro) #ums{ border-width: 4px; }
+.top #ums{ border-width: 4px; }
 
 /* ===== NAV BUTTONS ===== */
 .buttos{
@@ -179,6 +192,10 @@ body.ready .page{ opacity: 1; }
 
 /* ===== MOBILE ===== */
 @media (max-width: 700px){
+  @keyframes brandMove{
+      from{ transform: translate(0, calc(50vh - 50% - 12px - 40px)) scale(1.5); }
+      to  { transform: none; }
+  }
   .top{ flex-direction: column; align-items: center; }
   .top .buttos{ width: 100%; }
   .Con, .Key, .location{ width: 100%; }

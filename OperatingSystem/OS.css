@@ -127,3 +127,20 @@
     text-decoration: none;
     color: whitesmoke;
 }
+
+
+
+/* hide all OS sections, show only the active one */
+.os-section{
+    display: none;
+}
+.os-section.active{
+    display: block;
+}
+
+/* highlight the selected tab */
+.selection a.active{
+    color: darkgoldenrod;
+    font-weight: bold;
+    border-bottom: 2px solid darkgoldenrod;
+}

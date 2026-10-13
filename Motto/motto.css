@@ -5,7 +5,7 @@
     opacity: 1;
     visibility: visible;
     width: min(1000px, 94%);
-    margin: 220px auto 40px;   /* space for the header on desktop */
+    margin: 130px auto 40px;   /* space for the header on desktop */
     box-sizing: border-box;
     text-align: center;
 }

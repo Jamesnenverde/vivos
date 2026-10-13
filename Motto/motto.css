@@ -31,3 +31,13 @@
 }
 
 }
+
+
+.future,
+.titles{
+    position: relative;
+    z-index: 10;
+    opacity: 1;
+    visibility: visible;
+    margin-top: 40px;
+}

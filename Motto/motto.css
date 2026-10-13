@@ -1,43 +1,68 @@
-
+/* ---------- CONTENT WRAPPER ---------- */
+.motto-content{
+    position: relative;
+    z-index: 5;
+    opacity: 1;
+    visibility: visible;
+    width: min(1000px, 94%);
+    margin: 220px auto 40px;   /* space for the header on desktop */
+    box-sizing: border-box;
+    text-align: center;
+}
 
 .future{
-     margin-left: 30px;
-     flex-wrap: wrap;
     color: goldenrod;
+    margin: 0 0 30px;
 }
+
 .future h3{
-      margin-left: 20px;
+    margin: 0 0 10px;
 }
+
 .future h1{
-      margin-right: 25px;
+    margin: 0;
 }
+
 .titles{
-     font-style: oblique;
+    font-style: oblique;
     font-size: 30px;
     color: whitesmoke;
 }
 
-@media (max-width: 600px){
-.titles{
-    width: 80%;
-    flex-wrap: wrap;
-    font-size: 15px;
+.titles h3{
     color: whitesmoke;
 }
 
-.future{
-     flex-wrap: wrap;
-    color: goldenrod;
-}
+/* ---------- MOBILE / SMALL SCREENS ---------- */
+@media (max-width: 700px){
 
-}
+    /* header flows normally and stacks: logo and title first, then buttons */
+    header.top{
+        position: static !important;
+        transform: none !important;
+        animation: none !important;
+        width: 100% !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 10px;
+        padding: 10px;
+        box-sizing: border-box;
+    }
 
+    header.top .buttos{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 6px;
+    }
 
-.future,
-.titles{
-    position: relative;
-    z-index: 10;
-    opacity: 1;
-    visibility: visible;
-    margin-top: 40px;
+    .motto-content{
+        margin-top: 20px;
+        width: 92%;
+    }
+
+    .titles{
+        font-size: 15px;
+    }
 }

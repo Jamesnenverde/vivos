@@ -121,7 +121,7 @@ const opener = document.getElementById('open-profile');
 opener.addEventListener('click', openProfile);
 opener.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') openProfile(); });
 openProfile();   // go straight to the info
-// clicking Iris's photo goes back to the developer page
+// clicking Jessa's photo goes back to the developer page
 document.getElementById('close-profile').addEventListener('click', () => {
   window.location.href = '../Devjason/Developerjason.html';
 });
@@ -133,6 +133,73 @@ document.querySelectorAll('.tab').forEach(tab => {
     document.querySelectorAll('.gallery').forEach(g => g.hidden = g.id !== tab.dataset.target);
   });
 });
+
+/* ===== Typing code background (starts at the top) ===== */
+(function(){
+  const box = document.getElementById('code');
+  const src = [
+    "var firstname = document.getElementById('fname');",
+    "var lastname = document.getElementById('lname');",
+    "var password = document.getElementById('password');",
+    "if(isAlphabet(firstname, \"please enter Your First name\")){",
+    "  if(lengthRestriction(firstname, 3, 30, \"for your First name\")){",
+    "    var phone = document.getElementById('phone');",
+    "    if(isNumeric(phone, \"please enter Number only\")){",
+    "      if(lengthRestriction(phone, 10, 10, \"for your Phone number\")){",
+    "        return true;",
+    "      }",
+    "    }",
+    "  }",
+    "}",
+    "function validate(form){",
+    "  var username = document.getElementById('username');",
+    "  if(lengthRestriction(username, 5, 10, \"for your username\")){",
+    "    return true;",
+    "  }",
+    "}"
+  ];
+
+  const SPEED = 12;      // typing delay per character (ms): smaller = faster
+  const JITTER = 22;     // random extra delay (ms)
+  const PAUSE = 120;     // pause between lines (ms)
+
+  const esc = s => s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+  const hl = s => esc(s).replace(
+    /("[^"]*"?|'[^']*'?)|\b(var|if|return|true|function)\b|\b(\d+)\b|([A-Za-z_]\w*)(?=\()/g,
+    (m, str, kw, num, fn) =>
+      str ? `<span class="s">${m}</span>` :
+      kw  ? `<span class="k">${m}</span>` :
+      num ? `<span class="n">${m}</span>` :
+            `<span class="f">${m}</span>`
+  );
+
+  let lineNo = 140, i = 0;
+  const maxLines = () => Math.floor(innerHeight / 24);
+
+  function typeLine(){
+    const text = src[i++ % src.length];
+    const row = document.createElement('span');
+    row.className = 'ln';
+    row.innerHTML = `<span class="num">${lineNo++}</span><span class="txt"></span>`;
+    box.appendChild(row);
+    const txt = row.querySelector('.txt');
+    row.classList.add('cur');
+
+    let c = 0;
+    (function tick(){
+      c++;
+      txt.innerHTML = hl(text.slice(0, c));
+      if (c < text.length) {
+        setTimeout(tick, SPEED + Math.random() * JITTER);
+      } else {
+        row.classList.remove('cur');
+        while (box.children.length > maxLines()) box.removeChild(box.firstChild);
+        setTimeout(typeLine, PAUSE);
+      }
+    })();
+  }
+  typeLine();
+})();
 </script>
 </body>
 </html>

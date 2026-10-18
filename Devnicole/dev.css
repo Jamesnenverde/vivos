@@ -1,5 +1,37 @@
 [hidden]{ display: none !important; }
 
+/* ===== Typing code background ===== */
+.code-bg{
+    position: fixed;
+    inset: 0;
+    z-index: -1;                    /* behind the page content */
+    overflow: hidden;
+    display: flex;
+    align-items: flex-start;        /* code starts typing from the TOP */
+    background: #0b0d10;
+    pointer-events: none;
+}
+#code{
+    width: 100%;
+    padding: 0 20px 10px;
+    font: 15px/1.6 Consolas, "Courier New", monospace;
+    color: #f8f8f2;
+    opacity: .45;                   /* lower = easier to read the page */
+    white-space: pre-wrap;
+}
+#code .ln{ display:block; }
+#code .num{ color:#e91e63; display:inline-block; width:3.2em; user-select:none; }
+#code .k{ color:#f92672; }   /* keywords */
+#code .s{ color:#e6db74; }   /* strings */
+#code .f{ color:#66d9ef; }   /* functions */
+#code .n{ color:#ae81ff; }   /* numbers */
+#code .cur::after{
+    content:""; display:inline-block; width:.6em; height:1.1em;
+    background:#a6e22e; vertical-align:text-bottom;
+    animation: blink 1s steps(1) infinite;
+}
+@keyframes blink{ 50%{ opacity:0; } }
+
 /* ===== Developer picks ===== */
 .Developers{
     display: flex;

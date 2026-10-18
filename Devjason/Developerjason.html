@@ -10,6 +10,9 @@
 </head>
 <body class="playing">
 
+<!-- TYPING CODE BACKGROUND -->
+<div class="code-bg" aria-hidden="true"><div id="code"></div></div>
+
 <!-- HEADER: starts centered (intro), then animates to the upper-left -->
 <header class="top intro">
   <div class="brand">
@@ -59,12 +62,12 @@
     <a href="../Iris/Iris.html">
       <p class="aaa">Pingul</p>
       <img src="../Images/iris1.jpg" id="DeveloperArds" width="140" alt="Pingul">
-    </a> 
-      
+    </a>
+      <!---
      <a href="https://docs.google.com/document/d/1loaUspMmVx_oIn46Zd0OO-3wTlh5j1N9tWSCguw-4oo/edit?usp=sharing">
       <p class="aaa">Laxamana</p>
       <img src="../Images/khen1.jpg" id="DeveloperArds" width="140" height="160" alt="Laxamana">
-     </a>
+     </a>--->
   </div>
 
   <!-- Profile (shown after clicking the photo) -->
@@ -148,8 +151,14 @@ const devs = document.getElementById('devs');
 const profile = document.getElementById('profile');
 const webLabel = document.querySelector('.web');
 
-function openProfile(){ devs.hidden = true; webLabel.hidden = true; profile.hidden = false; }
-function closeProfile(){ profile.hidden = true; devs.hidden = false; webLabel.hidden = false; }
+function openProfile(){
+  devs.hidden = true; webLabel.hidden = true; profile.hidden = false;
+  document.body.classList.add('coding'); CodeBG.start();
+}
+function closeProfile(){
+  profile.hidden = true; devs.hidden = false; webLabel.hidden = false;
+  document.body.classList.remove('coding'); CodeBG.stop();
+}
 
 const opener = document.getElementById('open-profile');
 opener.addEventListener('click', openProfile);
@@ -163,6 +172,79 @@ document.querySelectorAll('.tab').forEach(tab => {
     document.querySelectorAll('.gallery').forEach(g => g.hidden = g.id !== tab.dataset.target);
   });
 });
+
+/* ===== Typing code background (starts at the top, runs only while profile is open) ===== */
+const CodeBG = (function(){
+  const box = document.getElementById('code');
+  const src = [
+    "var firstname = document.getElementById('fname');",
+    "var lastname = document.getElementById('lname');",
+    "var password = document.getElementById('password');",
+    "if(isAlphabet(firstname, \"please enter Your First name\")){",
+    "  if(lengthRestriction(firstname, 3, 30, \"for your First name\")){",
+    "    var phone = document.getElementById('phone');",
+    "    if(isNumeric(phone, \"please enter Number only\")){",
+    "      if(lengthRestriction(phone, 10, 10, \"for your Phone number\")){",
+    "        return true;",
+    "      }",
+    "    }",
+    "  }",
+    "}",
+    "function validate(form){",
+    "  var username = document.getElementById('username');",
+    "  if(lengthRestriction(username, 5, 10, \"for your username\")){",
+    "    return true;",
+    "  }",
+    "}"
+  ];
+
+  const SPEED = 12;      // typing delay per character (ms): smaller = faster
+  const JITTER = 22;     // random extra delay (ms)
+  const PAUSE = 120;     // pause between lines (ms)
+
+  const esc = s => s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+  const hl = s => esc(s).replace(
+    /("[^"]*"?|'[^']*'?)|\b(var|if|return|true|function)\b|\b(\d+)\b|([A-Za-z_]\w*)(?=\()/g,
+    (m, str, kw, num, fn) =>
+      str ? `<span class="s">${m}</span>` :
+      kw  ? `<span class="k">${m}</span>` :
+      num ? `<span class="n">${m}</span>` :
+            `<span class="f">${m}</span>`
+  );
+
+  let lineNo, i, run = 0;
+  const maxLines = () => Math.floor(innerHeight / 24);
+
+  function typeLine(id){
+    if (id !== run) return;                       // stopped or restarted
+    const text = src[i++ % src.length];
+    const row = document.createElement('span');
+    row.className = 'ln';
+    row.innerHTML = `<span class="num">${lineNo++}</span><span class="txt"></span>`;
+    box.appendChild(row);
+    const txt = row.querySelector('.txt');
+    row.classList.add('cur');
+
+    let c = 0;
+    (function tick(){
+      if (id !== run) return;
+      c++;
+      txt.innerHTML = hl(text.slice(0, c));
+      if (c < text.length) {
+        setTimeout(tick, SPEED + Math.random() * JITTER);
+      } else {
+        row.classList.remove('cur');
+        while (box.children.length > maxLines()) box.removeChild(box.firstChild);
+        setTimeout(() => typeLine(id), PAUSE);
+      }
+    })();
+  }
+
+  return {
+    start(){ box.innerHTML = ''; lineNo = 140; i = 0; typeLine(++run); },
+    stop(){ run++; box.innerHTML = ''; }
+  };
+})();
 </script>
 </body>
 </html>
